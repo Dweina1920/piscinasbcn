@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Poppins&display=swap');
+
+/*header*/
+*{
+ 
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 90.81%;
+    
+    background-color: #374364;
+}
+.img-logo-header{
+    position: absolute;
+    left: 2.78%;
+    right: 86.46%;
+    top: 7%;
+    bottom: 94.82%;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+.input-navbar{
+    position: absolute;
+    left: 74.03%;
+    right: 6.6%;
+    top: 30%;
+    bottom: 96.02%;
+    height: 30px;
+    color: #969696;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 0.5px solid #000000;
+    border-radius: 30px;
+
+}
+
+.button-publicar{
+    position: absolute;
+    left: 57.56%;
+    right: 27%;
+    top: 30%;
+    bottom: 96.65%;
+    background: #97E74E;
+    border-radius: 30px;
+    height: 30px;
+    border: 0.5px solid #000000;
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+   
+}
+
+.button-filtros{
+    position: absolute;
+    left: 47.56%;
+    right: 44%;
+    top: 30%;
+    bottom: 96.65%;
+    background: #97E74E;
+    border-radius: 30px;
+    height: 30px;
+    border: 0.5px solid #000000;
+    cursor: pointer;
+}
+
+/*imagen con información*/
+.div-img-informacion{
+    position: absolute;
+width: 750px;
+height: 249px;
+left: 20%;
+top: 119px;
+
+}
+.img-informacion{
+    width: 100%;
+    height: 100%;
+
+}
+
+/*barra subidos recientemente*/
+.subidos-recientemente{
+    position: absolute;
+width: 1162px;
+height: 50px;
+left: 7%;
+top: 399px;
+
+background: #00C037;
+color: white;
+
+}
+
+.texto-subidos-recientemente{
+    margin-left: 3%;
+    margin-top: 1%;
+    font-size: 25px;
+
+}
+/*book box*/
+
+.container-books{
+    position: absolute;
+    top:500px;
+    left: 9%;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    
+
+
+
+
+}
+.book-box{
+    
+    
+    width: 200px;
+    height: 280px;
+    
+    border: 1px solid #969696;
+    border-radius: 15px;
+    cursor: pointer;
+    
+    
+}
+
+.div-img-box{
+    height: 150px;
+    width: 200px;
+}
+
+.img-box{
+    height:100%;
+    width: 60%;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.info-box{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    display: block;
+    margin-left: 10px;
+    line-height: 16px;
+    
+    
+
+    
+}
+
+.titulo-box{
+    font-style: normal;
+font-weight: 700;
+font-size: 15px;
+
+
+color: #374364;
+}
+
+
+
+/*pagina RESULTADOS*/
+
+
+.titulo-resultados{
+    text-align: center;
+    margin-top:100px;
+    font-weight: bold;
+
+}
+
+.book-box-resultados{
+    width: 200px;
+    height: 280px;
+    margin-left: 75px;
+    border: 1px solid #969696;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.div-img-box-resultados{
+    height: 150px;
+    width: 200px;
+}
+
+.img-box-resultados{
+    height:100%;
+    width: 60%;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.info-box-resultados{
+    
+    height: 50px;
+   
+   
+    text-align: left;
+    padding-left: 20px;
+    text-overflow: ellipsis; 
+    
+    
+
+    
+}
+
+.titulo-box-resultados{
+    font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+
+color: #374364;
+}
+
+
+/*Detalle del libro*/
+.container-detail{
+    display: flex;
+    
+
+margin-top: 75px;
+margin-left: 220px;
+margin-right:220px;
+
+
+}
+
+.div-imagen-detail{
+    width: 1500px;
+    height: 500px;
+
+}
+
+.imagen-detail{
+    width: 100%;
+    height: 100%;
+}
+
+.box-info-detail{
+    margin-left:40px;
+    padding: 0px;
+    color:#374364;
+    font-size: 18px;
+   
+}
+.emoticonos{
+    cursor: pointer;
+}
+
+
+
+.titulo-detail{
+    font-weight: bolder;
+}
+
+.button-detail{
+background: #00C037;
+border-radius: 71px;
+color: white;
+border:none;
+width: 250px;
+height: 50px;
+}
+
+/*footer*/
+
+.footer{
+    position:fixed;
+    background-color:#374364;;
+    bottom: 0%;
+    right: 0%;
+    left:0%;
+    top: 97%;
+}
+
+    /*welcome*/
+.container-welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right:10%;
+}
+
+
+
+.logo{
+    margin-left: 43%;
+    margin-top: 5%;
+    height: 230px;
+    width: 200px;
+ }
+
+.buttonwelcome1{
+    background-color: #00C037;
+    color: white;
+    border-radius: 25px;
+    font-size: 30px;
+    margin-right: 8px;
+    border:none;
+    width: 300px;
+ }
+
+ .buttonwelcome2{
+    background-color: #00C037;
+    color: white;
+    border-radius: 25px;
+    font-size: 30px;
+    margin-left: 8px;
+    border:none;
+    width: 300px;
+  
+ }
+
+ .frase {
+    margin-left: 40%;
+    font-size: 20px;
+    font-style: italic;
+ }
+
+.center-logo {
+    margin-left: 30%;
+}
+
+@media (max-width: 600px) { 
+    .container-books{
+       
+        display: grid;
+        grid-template-columns: repeat(2);
+    
+        
+    }
+
+    .div-img-informacion{
+        src:"../img/bannerresponsive.png";
+    }
+    .input-navbar{
+        width: 60px;
+    }
+
+    .button-filtros{
+        font-size: 10px;
+    }
+    .container-detail{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 400px;
+        margin-left: 0px;
+        
+    }
+    .div-imagen-detail{
+        width: 350px;
+        height: 250px;
+    
+    }
+}
+
+
+
+
