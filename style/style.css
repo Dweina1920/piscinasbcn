@@ -6,6 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 .header{
     position: absolute;
     left: 0%;
@@ -54,6 +55,8 @@
     text-decoration: inherit;
     color: inherit;
     cursor: pointer;
+    width: 100px;
+    text-align: center;
    
 }
 
@@ -68,6 +71,11 @@
     height: 30px;
     border: 0.5px solid #000000;
     cursor: pointer;
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-align: center;
+   
 }
 
 /*imagen con información*/
@@ -152,6 +160,7 @@ color: white;
     display: block;
     margin-left: 10px;
     line-height: 16px;
+    
     
     
 
@@ -271,6 +280,7 @@ color: white;
 border:none;
 width: 250px;
 height: 50px;
+
 }
 
 /*footer*/
@@ -332,6 +342,119 @@ height: 50px;
     margin-left: 30%;
 }
 
+/*formulario*/
+
+.pag-venta{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.vent-titulo{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+form input, select{
+    padding: 2%;
+    margin: 1% 0;
+}
+
+
+.formulario-venta{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.primary-btn{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+.sub-btn{
+    background-color: #00C037    ;
+    padding: 2% 10%;
+    border-radius: 50px;
+    border: 0;
+    margin: 5% 0 0 0;
+    font-size: 25px;
+    font-weight: 700;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.sub-btn:hover{
+    background-color: #000;
+}
+
+
+
+
+.grid-item {
+    font-size: 30px;
+    margin: 141px 82px;
+    position: absolute;
+    text-align: center;
+}
+
+#display-image{
+    width: 312px;
+    height: 400px;
+    border: 3px solid black;
+    background-size: cover;
+  
+ 
+  }
+
+#image-input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+    .plus{
+        font-size: 80px;
+    }
+
+    .input-lb {
+        font-size: 14px;
+        font-weight: 600;
+        color: black;
+        background-color: transparent;
+        display: inline-block;
+        transition: all .5s;
+        cursor: pointer;
+        text-transform: uppercase;
+        width: fit-content;
+        text-align: center;
+}
+
+
+
+/*editar*/
+
+.id-edit{
+    display: none;
+}
+
+
+
+
+
 @media (max-width: 600px) { 
     .container-books{
        
@@ -365,7 +488,6 @@ height: 50px;
     
     }
 }
-
 
 
 

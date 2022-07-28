@@ -1,17 +1,6 @@
 <?php 
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "piscinas-barcelona";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+include '../services/connection.php';
 
 
  $id = $_GET['id'];
@@ -37,9 +26,9 @@ if ($conn->connect_error) {
     <img class="img-logo-header" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0uMXac-Qhq4t9SC-qoVNfX5Sn01_Ms7dQyA&usqp=CAU" alt="logo"></img>
   </div>
   <div class="div-header">
-              <input class= "input-navbar" type="text" value="  Buscar..."></input>
-              <a class= "button-publicar" href="formulario.php">   +   Publique su piscina</a>
-              <button class= "button-filtros">   Filtros</button>
+  <input class= "input-navbar" type="text" placeholder="Buscar..."></input>
+              <a class= "button-publicar" href="home.php">Home</a>
+              <a class= "button-filtros" href="crear.php">Crear</a>
 
   </div>
 </header>
@@ -62,21 +51,24 @@ if ($conn->connect_error) {
                 <p class="titulo-detail"><?php echo $row['precio']?></>
                 <p class="description-detail"><?php echo $row['descripcion']?></p>
             </div>
-        <?php
+  
+
+            <div class="emoticonos">
+                <div>
+                  <p>★</p>
+                </div>
+                <div>
+                  <a href="edit.php?id=<?php echo $row['id']?>" class="button-detail">EDITAR</a>
+                  <a href="delete-pool.php?id=<?php echo $row['id']?>">
+                  <button class="button-detail">BORRAR</button>
+                  </a>
+            </div>
+            </div>
+            <?php
       }
     
     $conn->close();
     ?>
-
-            <div class="emoticonos">
-                <div>
-                <p>★</p>
-                </div>
-                <div>
-            <button class="button-detail">COMPRAR ENTRADA</button>
-            </div>
-            </div>
-        
     </div>
         
 

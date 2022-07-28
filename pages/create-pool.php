@@ -1,10 +1,20 @@
 <?php
  include '../services/connection.php';
+//Data from Post
 
- $sql= 'SELECT * from piscinas';
+$nombre = $_POST['nombre'];
+$poblacion = $_POST['poblacion'];
+$direccion = $_POST['direccion'];
+$descripcion = $_POST['descripcion'];
+$precio = $_POST['precio'];
+$img = $_POST['img'];
+
+//consulta SQL//
+ $sql= "INSERT INTO piscinas (nombre, poblacion, direccion, descripcion, precio, img) VALUES ('$nombre', '$poblacion', '$direccion', '$descripcion', '$precio', '$img')";
+
  $resultado = $conn->query($sql);
 
-  
+
 ?>
 
 <!DOCTYPE html>
@@ -44,29 +54,26 @@
         </div>
 
         <div class="container-books">
-   <?php //Entrega de resultados
-    while($row = $resultado->fetch_assoc()) {
 
-?>
-          <div class="book-box">
-            <a href="detailpool.php?id=<?php echo $row['id']?>">
-            <div class="div-img-box">
-              <img class="img-box" src="<?php echo $row['img']?> " alt="imagen libro" tipe="text"/>
-            </div>
-            <div class=info-box>
-              <p class="titulo-box"><?php echo $row['nombre']?></p>
-              <p class="autor-box"><?php echo $row['direccion']?></p>
-              <p class="titulo-box"><?php echo $row['precio']?></p>
-            </div>
-          </div>
+
+      <?php  if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+  } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+
+  
+  ?>
+
         
-
-
-<?php
+        
+          <?php
       }
     
     $conn->close();
     ?>
+    </div>
+          
+
     </div>
 </body>
 </html>
