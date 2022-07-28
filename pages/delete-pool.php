@@ -1,10 +1,16 @@
 <?php
  include '../services/connection.php';
+//Data from Post
+$id = $_GET['id'];
 
- $sql= 'SELECT * from piscinas';
+
+
+//consulta SQL//
+ $sql= "DELETE FROM piscinas  WHERE id=".$id; 
+
  $resultado = $conn->query($sql);
 
-  
+
 ?>
 
 <!DOCTYPE html>
@@ -23,10 +29,8 @@
     <img  class="img-logo-header" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0uMXac-Qhq4t9SC-qoVNfX5Sn01_Ms7dQyA&usqp=CAU" alt="logo"></img>
   </div>
   <div class="div-header">
-             <form action="buscador.php" method="post">
-              <input class= "input-navbar" type="text" name="search" placeholder="  Buscar..."></input>
-            </form> 
-
+             
+              <input class= "input-navbar" type="text" value="  Buscar..."></input>
               <a class= "button-publicar" href="home.php">Home</a>
               <a class= "button-filtros" href="crear.php">Crear</a>
 
@@ -46,29 +50,27 @@
         </div>
 
         <div class="container-books">
-   <?php //Entrega de resultados
-    while($row = $resultado->fetch_assoc()) {
 
-?>
-          <div class="book-box">
-            <a href="detailpool.php?id=<?php echo $row['id']?>">
-            <div class="div-img-box">
-              <img class="img-box" src="<?php echo $row['img']?> " alt="imagen libro" tipe="text"/>
-            </div>
-            <div class=info-box>
-              <p class="titulo-box"><?php echo $row['nombre']?></p>
-              <p class="autor-box"><?php echo $row['direccion']?></p>
-              <p class="titulo-box"><?php echo $row['precio']?></p>
-            </div>
-          </div>
+
+      <?php  if ($conn->query($sql) === TRUE) {
+        
+    echo '<script>alert("Has eliminado el anuncio") </script>';
+  } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+
+  
+  ?>
+
+         
         
 
-
-<?php
+          <?php
       }
     
     $conn->close();
     ?>
+    </div>
+          
     </div>
 </body>
 </html>

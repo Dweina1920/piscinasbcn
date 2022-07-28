@@ -1,12 +1,32 @@
-<?php 
+<?php
+ include '../services/connection.php';
 
-include '../services/connection.php';
-
-
- $id = $_GET['id'];
- $sql= 'SELECT * from piscinas WHERE id='.$id;
+ $sql= 'SELECT * from piscinas';
  $resultado = $conn->query($sql);
+
+
+ include '../services/connect_test_db.php';
+ $searchErr = '';
+ $piscinas_details= '';
+
+ if(isset($_POST['search']))
+{
+    if(!empty($_POST['search']))
+    {
+        $search = $_POST['search'];
+        $stmt = $con->prepare("SELECT * from piscinas WHERE nombre like '%$search%' or direccion like '%$search%'");
+        $stmt->execute();
+        $piscinas_details = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+    }
+    else
+    {
+        $searchErr = "Please enter the information";
+    }
+}
+$conn->close();
  ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,22 +54,31 @@ include '../services/connection.php';
 </header>
         <main>
         <div class="container-detail">
-        <?php //Entrega de resultados
-    while($row = $resultado->fetch_assoc()) {
+        
+         <?php  
+         if (!$piscinas_details) {
+            echo "No encontrado";
+          } else {
+           
+            foreach($piscinas_details as $key=>$value)
+        
+          {
+          ?>
+   
 
-?>
+
             <div class="div-imagen-detail" >
-                <img class="imagen-detail" src="<?php echo $row['img']?>" alt="image-book"/>
+                <img class="imagen-detail" src="<?php echo $value['img']?>" alt="image-book"/>
             </div>
 
             <div class="box-info-detail">
             <div class="info-info">
-                <p class="titulo-detail"><?php echo $row['nombre']?></p>
-                <p class="titulo-detail" ><?php echo $row['poblacion']?></p>
-                <p><?php echo $row['direccion']?></p>
+                <p class="titulo-detail"><?php echo $value['nombre']?></p>
+                <p class="titulo-detail" ><?php echo $value['poblacion']?></p>
+                <p><?php echo $value['direccion']?></p>
         
-                <p class="titulo-detail"><?php echo $row['precio']?></>
-                <p class="description-detail"><?php echo $row['descripcion']?></p>
+                <p class="titulo-detail"><?php echo $value['precio']?></>
+                <p class="description-detail"><?php echo $value['descripcion']?></p>
             </div>
   
 
@@ -59,19 +88,19 @@ include '../services/connection.php';
                 </div>
                 <div>
                   
-                  <a href="edit.php?id=<?php echo $row['id']?>">
+                  <a href="edit.php?id=<?php echo $value['id']?>">
                   <button class="button-detail">EDITAR</button>
                   </a>
                   
-                  <a href="delete-pool.php?id=<?php echo $row['id']?>">
+                  <a href="delete-pool.php?id=<?php echo $value['id']?>">
                   <button class="button-detail">BORRAR</button>
                   </a>
             </div>
             </div>
             <?php
-      }
-    
-    $conn->close();
+             }
+          }
+  
     ?>
     </div>
         
