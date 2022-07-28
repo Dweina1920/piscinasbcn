@@ -1,16 +1,17 @@
 <?php
  include '../services/connection.php';
 //Data from Post
-
+$id = $_POST['id'];
 $nombre = $_POST['nombre'];
 $poblacion = $_POST['poblacion'];
 $direccion = $_POST['direccion'];
 $descripcion = $_POST['descripcion'];
 $precio = $_POST['precio'];
 $img = $_POST['img'];
-$id = $_POST['id'];
+
+
 //consulta SQL//
- $sql= "UPDATE piscinas SET nombre='$nombre', poblacion='$poblacion', direccion='$direccion', descripcion='$descripcion', img='$img' WHERE id=$id ";
+ $sql= "UPDATE piscinas SET nombre='".$nombre."', poblacion='".$poblacion."', direccion='".$direccion."', descripcion='".$descripcion."', precio='".$precio."', img='".$img."' WHERE id=".$id; 
 
  $resultado = $conn->query($sql);
 
@@ -57,24 +58,14 @@ $id = $_POST['id'];
 
 
       <?php  if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "New record Edited successfully";
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 
   
   ?>
 
-          <div class="book-box">
-            <a href="detailpool.php?id=<?php echo $row['id']?>">
-            <div class="div-img-box">
-              <img class="img-box" src="<?php echo $row['img']?>" alt="imagen libro"/>
-            </div>
-            <div class=info-box>
-              <p class="titulo-box"><?php echo $row['nombre']?></p>
-              <p class="autor-box"><?php echo $row['direccion']?></p>
-              <p class="titulo-box"><?php echo $row['precio']?></p>
-            </div>
-          </div>
+         
         
 
           <?php

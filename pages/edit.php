@@ -47,7 +47,7 @@ include '../services/connection.php';
         
                 <form action="edit-pool.php" method="post">
                     
-                    <input   type="text" name="id"  value="<?php echo $row['id']?>" id="" disabled>
+                    <input   type="text" name="id"  value="<?php echo $row['id']?>" id="" >
                     
                     <input type="text" name="nombre"  value="<?php echo $row['nombre']?>" id="">
 
