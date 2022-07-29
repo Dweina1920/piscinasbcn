@@ -6,7 +6,7 @@
 5. [Agradecimientos](#agradecimientos)
 
 
-### General Info
+### Información general
 ***
 Hemos creado la plataforma para poder facilitar a las personas la elección ideal para ir a la piscina en verano. Vas a poder ahorrar tiempo y lo vas a poder dedicar a otras cosas más productivas. 
 
