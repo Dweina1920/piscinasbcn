@@ -10,6 +10,7 @@ include '../services/connection.php';
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,17 +22,7 @@ include '../services/connection.php';
   
 </head>
     <body>
-    <header class="header">
-  <div>
-    <img class="img-logo-header" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0uMXac-Qhq4t9SC-qoVNfX5Sn01_Ms7dQyA&usqp=CAU" alt="logo"></img>
-  </div>
-  <div class="div-header">
-  <input class= "input-navbar" type="text" placeholder="Buscar..."></input>
-              <a class= "button-publicar" href="home.php">Home</a>
-              <a class= "button-filtros" href="crear.php">Crear</a>
-
-  </div>
-</header>
+  <?php include '../components/header.php' ?>
         <main>
         <div class="container-detail">
         <?php //Entrega de resultados
@@ -55,9 +46,9 @@ include '../services/connection.php';
 
             <div class="emoticonos">
                 <div>
-                  <p>★</p>
+                  <p>★   ❤</p>
                 </div>
-                <div>
+                <div class="delete-edit">
                   
                   <a href="edit.php?id=<?php echo $row['id']?>">
                   <button class="button-detail">EDITAR</button>

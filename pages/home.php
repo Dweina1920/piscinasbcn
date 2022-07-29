@@ -18,22 +18,7 @@
 </head>
 <body>
 
-<header class="header">
-  <div>
-    <img  class="img-logo-header" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0uMXac-Qhq4t9SC-qoVNfX5Sn01_Ms7dQyA&usqp=CAU" alt="logo"></img>
-  </div>
-  <div class="div-header">
-             <form action="buscador.php" method="post">
-              <input class= "input-navbar" type="text" name="search" placeholder="  Buscar..."></input>
-            </form> 
-
-              <a class= "button-publicar" href="home.php">Home</a>
-              <a class= "button-filtros" href="crear.php">Crear</a>
-
-            
-
-  </div>
-</header>
+<?php include '../components/header.php' ?>
 
 
 <main>
@@ -44,8 +29,8 @@
         <div class="subidos-recientemente">
           <p class="texto-subidos-recientemente">Piscinas de Barcelona</p>
         </div>
-
         <div class="container-books">
+        
    <?php //Entrega de resultados
     while($row = $resultado->fetch_assoc()) {
 
@@ -61,14 +46,15 @@
               <p class="titulo-box"><?php echo $row['precio']?></p>
             </div>
           </div>
-        
-
+         
+          
 
 <?php
       }
     
     $conn->close();
     ?>
-    </div>
+    
+    </div>  
 </body>
 </html>

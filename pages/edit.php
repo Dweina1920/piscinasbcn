@@ -22,17 +22,7 @@ include '../services/connection.php';
 </head>
 <body>
 
-<header class="header">
-  <div>
-    <img class="img-logo-header" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0uMXac-Qhq4t9SC-qoVNfX5Sn01_Ms7dQyA&usqp=CAU" alt="logo"></img>
-  </div>
-  <div class="div-header">
-              <input class= "input-navbar" type="text" value="  Buscar..."></input>
-              <a class= "button-publicar" href="home.php">Home</a>
-              <a class= "button-filtros" href="crear.php">Crear</a>
-
-  </div>
-</header>
+<?php include '../components/header.php' ?>
 
     <div class="pag-venta">
 
@@ -47,7 +37,7 @@ include '../services/connection.php';
         
                 <form action="edit-pool.php" method="post">
                     
-                    <input   type="text" name="id"  value="<?php echo $row['id']?>" id="" >
+                    <input   type="text" name="id"  value="<?php echo $row['id']?>" id="" readonly>
                     
                     <input type="text" name="nombre"  value="<?php echo $row['nombre']?>" id="">
 
@@ -65,7 +55,7 @@ include '../services/connection.php';
 
                     <input class="cov-btn" name="img" type="text" value="<?php echo $row['img']?>" id="">
 
-                    <button class="sub-btn" type="submit">Crear</button>
+                    <button class="sub-btn" type="submit">EDITAR</button>
                     
 
                 </form>

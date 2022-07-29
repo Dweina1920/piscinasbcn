@@ -12,7 +12,7 @@
     left: 0%;
     right: 0%;
     top: 0%;
-    bottom: 90.81%;
+    bottom: 85.81%;
     
     background-color: #374364;
 }
@@ -20,18 +20,23 @@
     position: absolute;
     left: 2.78%;
     right: 86.46%;
-    top: 7%;
+    top: 20%;
     bottom: 94.82%;
     height: 50px;
     border-radius: 50%;
 }
+.input{
+    left: 66.03%;
+    right: 15.6%;
+  
+    height: 30px;
 
-
-.input-navbar{
+}
+.input-buscar{
     position: absolute;
     left: 66.03%;
     right: 15.6%;
-    top: 30%;
+    top:1px;
     bottom: 96.02%;
     height: 30px;
     color: #969696;
@@ -39,6 +44,8 @@
     background: #FFFFFF;
     border: 0.5px solid #000000;
     border-radius: 30px;
+    width: 150px;
+ 
 
 }
 
@@ -49,6 +56,7 @@
     top: 30%;
     bottom: 96.02%;
     width: 150px;
+
     background: #97E74E;
     border-radius: 30px;
     height: 30px;
@@ -138,11 +146,13 @@ color: white;
     top:500px;
     left: 9%;
     width: 1200px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
     
-
+    
+  
+  
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 50px 100px;
 
 
 
@@ -257,7 +267,7 @@ color: #374364;
     display: flex;
     
 
-margin-top: 75px;
+margin-top: 120px;
 margin-left: 220px;
 margin-right:220px;
 
@@ -305,6 +315,10 @@ margin-top: 30px;
 
 .button-detail-editar{
 width: 500px;
+}
+.delete-edit{
+    display: flex;
+    flex-direction: row;
 }
 
 /*footer*/

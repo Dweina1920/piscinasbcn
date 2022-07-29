@@ -24,20 +24,7 @@ $id = $_GET['id'];
 </head>
 <body>
 
-<header class="header">
-  <div>
-    <img  class="img-logo-header" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0uMXac-Qhq4t9SC-qoVNfX5Sn01_Ms7dQyA&usqp=CAU" alt="logo"></img>
-  </div>
-  <div class="div-header">
-             
-              <input class= "input-navbar" type="text" value="  Buscar..."></input>
-              <a class= "button-publicar" href="home.php">Home</a>
-              <a class= "button-filtros" href="crear.php">Crear</a>
-
-            
-
-  </div>
-</header>
+<?php include '../components/header.php' ?>
 
 
 <main>
