@@ -2,7 +2,9 @@
 1. [Información general](#general-info)
 2. [Tecnologías ](#technologies)
 3. [Instalación](#installation)
-4. [Colaboraciones](#collaboration)
+4. [Partes de la plataforma](#collaboration)
+5. [Agradecimientos](#agradecimientos)
+
 
 ### General Info
 ***
@@ -21,12 +23,20 @@ CÓMO CLONAR EL REPOSITORIO
 ```
 $ git clone https://github.com/Dweina1920/piscinasbcn.git
 
-Side information: To use the application in a special environment use ```lorem ipsum``` to start
-## PARTES DE LA PLATAFORMA
+
+## Partes de la plataforma
 ***
 
 > HOME
 > DETAIL OF POOLS (DELETE-EDIT)
 > CREATE
 > SEARCHER
+
+## Agradecimientos
+
+#### A Carlos y a su vídeo. 
+#### A Carol y las ayudas con el crear doble, y las tardes de meet.
+#### A Flor y las ayudas con el searcher y el display grid. 
+#### Alexandra y Lola por el apoyo. 
+ 
 
